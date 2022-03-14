@@ -1,0 +1,21 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.img-person {
+    border-radius: 35%; 
+    width: 150px;
+}
+
+.menu-opcoes ul {
+    float: left;
+  }
+
+.menu-opcoes ul li {
+    margin-left: 20px;
+    font-size: 15px;
+    position: relative;
+    display: inline-block
+}
+
+.body-person {
+    text-align: center;
+}

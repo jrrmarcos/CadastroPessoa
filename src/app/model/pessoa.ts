@@ -1,5 +1,5 @@
 export interface Pessoa { 
-    nome: string, 
-    idade: number, 
+    name: string, 
+    dtnasc: string, 
     imagem: string
 }

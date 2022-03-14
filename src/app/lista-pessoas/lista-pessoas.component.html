@@ -1,0 +1,14 @@
+<div> 
+    <nav class="menu-opcoes">
+    <ul class = "form-row">
+        <li class="list-group-item" *ngFor="let pessoa of lista; let i = index">
+            <div class="body-person"> 
+                <h2>{{pessoa.name}}</h2>
+                <img [src] = "pessoa.imagem" class="img-person">
+                <h3>{{pessoa.dtnasc}}</h3>
+                <button class="btn btn-danger" href="#">Remove</button>
+            </div>
+        </li>
+    </ul>
+    </nav>
+</div>
