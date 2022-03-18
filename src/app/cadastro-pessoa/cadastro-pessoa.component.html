@@ -2,21 +2,21 @@
 
     <div class="card p-3">
 
-        <form>
+        <form #pessoaForm="ngForm" (ngSubmit)="onSubmit()" ngNativeValidate>
 
             <div class="form-group">
                 <label for="nome">Nome</label><br>
-                <input type="text" id="nome" name="nome" formControlName="nome"><br><br>
+                <input type="text" id="nome" name="nome" [(ngModel)]="nome"><br><br>
             </div>
 
             <div class="form-group">
                 <label for="dtnasc">Data de Nascimento</label><br>
-                <input type="date" id="dtnasc" name="dtnasc" formControlName="dtnasc"><br><br>
+                <input type="date" id="dtnasc" name="dtnasc" [(ngModel)]="dtnasc"><br><br>
             </div>
 
             <div class="form-group">
                 <label for="imagem">Imagem</label><br>
-                <input type="text" id="imagem" name="imagem" formControlName="imagem"><br><br>
+                <input type="text" id="imagem" name="imagem" [(ngModel)]="imagem"><br><br>
             </div>
 
             <div class="form-group">
@@ -26,3 +26,5 @@
         </form>
     </div>
 </div>
+
+<app-lista-pessoas [lista]="listaPessoa"></app-lista-pessoas>
