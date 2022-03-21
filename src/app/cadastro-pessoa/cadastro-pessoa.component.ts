@@ -39,6 +39,8 @@ export class CadastroPessoaComponent implements OnInit {
       //Valida se a data de nascimento está preenchida
     } else if (pessoa.dtnasc=="") {
       alert("Data de Nascimento não pode estar em branco!")
+    } else if (pessoa.dtnasc <="1500/01/01"){
+      alert("Data de nascimento inválida! Favor revisar e tentar novamente")
     } else{
       this.listaPessoa.push(pessoa)
     }
