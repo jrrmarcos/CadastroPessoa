@@ -26,7 +26,6 @@ export class CadastroPessoaComponent implements OnInit {
 
     //Validação de nome já existente
     if (!this.getPessoa(pessoa)) {
-      if (pessoa.imagem == "") pessoa.imagem = 'https://www.thispersondoesnotexist.com/image'
       this.adicionarPessoa(pessoa)
     } else {
       alert("Nome já utilizado!")
@@ -34,8 +33,15 @@ export class CadastroPessoaComponent implements OnInit {
   }
 
   adicionarPessoa(pessoa: Pessoa): void {
-    this.listaPessoa.push(pessoa)
-    alert(JSON.stringify(this.listaPessoa));
+    //Valida se o nome está preenchido
+    if (pessoa.name == "") {
+      alert("Nome não pode estar em branco!")
+      //Valida se a data de nascimento está preenchida
+    } else if (pessoa.dtnasc=="") {
+      alert("Data de Nascimento não pode estar em branco!")
+    } else{
+      this.listaPessoa.push(pessoa)
+    }
   }
 
   getPessoa(getPessoa: Pessoa) {

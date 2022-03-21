@@ -21,7 +21,6 @@ export class ListaPessoasComponent implements OnInit {
   }
 
   deletarPessoa(delPessoa: Pessoa) {
-    alert(JSON.stringify(this.lista));
     const index = this.lista.findIndex(pessoa => pessoa.name == delPessoa.name)
     if(index>-1){
       this.lista.splice(index,1);
